@@ -21,4 +21,5 @@ supaplex@sky:~/usr/src/github-by-user/supaplextor/aqemu$ ip l
     link/ether fe:5e:81:bc:25:8a brd ff:ff:ff:ff:ff:ff
 8: tap1: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel master br1 state UNKNOWN mode DEFAULT group default qlen 1000
     link/ether fe:f5:8a:04:6c:82 brd ff:ff:ff:ff:ff:ff
+$ sudo ip link set dev br1 up
 </code></pre>
