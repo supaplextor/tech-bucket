@@ -28,6 +28,6 @@ timeout 0
 DEFAULT live
 LABEL live
         KERNEL debian-live/vmlinuz
-        APPEND initrd=debian-live/initrd.img boot=live nfsroot=192.168.1.126:/srv/tftp/amd64/debian-live ethdevice-timeout=120 panic=10 noprompt noeject quiet systemd.log_level=notice splash live-media-path= netboot=nfs nfsroot=192.168.1.126:/srv/netboot/images/desktop-staff-latest
+        APPEND initrd=debian-live/initrd.img boot=live nfsroot=192.168.1.126:/srv/tftp/amd64/debian-live ethdevice-timeout=120 panic=10 noprompt noeject quiet systemd.log_level=notice splash live-media-path= netboot=nfs 
 
 ```
