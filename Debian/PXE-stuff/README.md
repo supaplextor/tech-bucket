@@ -15,19 +15,4 @@ total 3447400
 -r--r--r-- 2 root root  143006652 Nov 15  2025 initrd.img-6.12.57+deb13-amd64
 -r--r--r-- 2 root root   12101568 Nov  5  2025 vmlinuz
 -r--r--r-- 2 root root   12101568 Nov  5  2025 vmlinuz-6.12.57+deb13-amd64
-
-root@ssr120-debian1:/srv/tftp/amd64/pxelinux.cfg# cat 01-00-ee-19-7f-62-6c 
-# D-I config version 2.0
-# search path for the c32 support libraries (libcom32, libutil etc.)
-#path debian-installer/amd64/boot-screens/
-#include debian-installer/amd64/boot-screens/menu.cfg
-#default debian-installer/amd64/boot-screens/vesamenu.c32
-
-prompt 0
-timeout 0
-DEFAULT live
-LABEL live
-        KERNEL debian-live/vmlinuz
-        APPEND initrd=debian-live/initrd.img boot=live nfsroot=192.168.1.126:/srv/tftp/amd64/debian-live ethdevice-timeout=120 panic=10 noprompt noeject quiet systemd.log_level=notice splash live-media-path= netboot=nfs 
-
 ```
