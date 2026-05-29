@@ -1,0 +1,12 @@
+# D-I config version 2.0
+# search path for the c32 support libraries (libcom32, libutil etc.)
+#path debian-installer/amd64/boot-screens/
+#include debian-installer/amd64/boot-screens/menu.cfg
+#default debian-installer/amd64/boot-screens/vesamenu.c32
+
+prompt 0
+timeout 0
+DEFAULT live
+LABEL live
+	KERNEL debian-live/vmlinuz
+	APPEND initrd=debian-live/initrd.img boot=live nfsroot=192.168.1.126:/srv/tftp/amd64/debian-live ethdevice-timeout=120 panic=10 noprompt noeject quiet systemd.log_level=notice splash live-media-path= netboot=nfs
