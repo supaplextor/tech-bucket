@@ -50,3 +50,60 @@ default via 192.168.1.1 dev br-lan
 192.168.1.0/24 dev br-lan scope link  src 192.168.1.177 
 
 ```
+# opkg update operation not permitted - network stack
+
+/etc/resolv.conf was empty.
+
+```
+root@OpenWrt:/mnt# opkg update
+Downloading https://downloads.openwrt.org/releases/24.10.5/targets/ipq40xx/generic/packages/Packages.gz
+Failed to send request: Operation not permitted
+Failed to send request: Operation not permitted
+*** Failed to download the package list from https://downloads.openwrt.org/releases/24.10.5/targets/ipq40xx/generic/packages/Packages.gz
+
+Downloading https://downloads.openwrt.org/releases/24.10.5/packages/arm_cortex-a7_neon-vfpv4/base/Packages.gz
+Failed to send request: Operation not permitted
+*** Failed to download the package list from https://downloads.openwrt.org/releases/24.10.5/packages/arm_cortex-a7_neon-vfpv4/base/Packages.gz
+
+Downloading https://downloads.openwrt.org/releases/24.10.5/targets/ipq40xx/generic/kmods/6.6.119-1-eaef302ef5ab82928154706763925f63/Packages.gz
+Failed to send request: Operation not permitted
+*** Failed to download the package list from https://downloads.openwrt.org/releases/24.10.5/targets/ipq40xx/generic/kmods/6.6.119-1-eaef302ef5ab82928154706763925f63/Packages.gz
+
+Downloading https://downloads.openwrt.org/releases/24.10.5/packages/arm_cortex-a7_neon-vfpv4/luci/Packages.gz
+Failed to send request: Operation not permitted
+*** Failed to download the package list from https://downloads.openwrt.org/releases/24.10.5/packages/arm_cortex-a7_neon-vfpv4/luci/Packages.gz
+
+Downloading https://downloads.openwrt.org/releases/24.10.5/packages/arm_cortex-a7_neon-vfpv4/packages/Packages.gz
+Updated list of available packages in /var/opkg-lists/openwrt_packages
+Downloading https://downloads.openwrt.org/releases/24.10.5/packages/arm_cortex-a7_neon-vfpv4/packages/Packages.sig
+Failed to send request: Operation not permitted
+Signature file download failed.
+Remove wrong Signature file.
+Downloading https://downloads.openwrt.org/releases/24.10.5/packages/arm_cortex-a7_neon-vfpv4/routing/Packages.gz
+Updated list of available packages in /var/opkg-lists/openwrt_routing
+Downloading https://downloads.openwrt.org/releases/24.10.5/packages/arm_cortex-a7_neon-vfpv4/routing/Packages.sig
+Signature check passed.
+Downloading https://downloads.openwrt.org/releases/24.10.5/packages/arm_cortex-a7_neon-vfpv4/telephony/Packages.gz
+Updated list of available packages in /var/opkg-lists/openwrt_telephony
+Downloading https://downloads.openwrt.org/releases/24.10.5/packages/arm_cortex-a7_neon-vfpv4/telephony/Packages.sig
+Signature check passed.
+Collected errors:
+ * opkg_download: Failed to download https://downloads.openwrt.org/releases/24.10.5/targets/ipq40xx/generic/packages/Packages.gz, wget returned 4.
+ * opkg_download: Check your network settings and connectivity.
+
+ * opkg_download: Failed to download https://downloads.openwrt.org/releases/24.10.5/packages/arm_cortex-a7_neon-vfpv4/base/Packages.gz, wget returned 4.
+ * opkg_download: Check your network settings and connectivity.
+
+ * opkg_download: Failed to download https://downloads.openwrt.org/releases/24.10.5/targets/ipq40xx/generic/kmods/6.6.119-1-eaef302ef5ab82928154706763925f63/Packages.gz, wget returned 4.
+ * opkg_download: Check your network settings and connectivity.
+
+ * opkg_download: Failed to download https://downloads.openwrt.org/releases/24.10.5/packages/arm_cortex-a7_neon-vfpv4/luci/Packages.gz, wget returned 4.
+ * opkg_download: Check your network settings and connectivity.
+
+ * opkg_download: Failed to download https://downloads.openwrt.org/releases/24.10.5/packages/arm_cortex-a7_neon-vfpv4/packages/Packages.sig, wget returned 4.
+ * opkg_download: Check your network settings and connectivity.
+
+root@OpenWrt:/mnt# 
+
+
+```
