@@ -104,6 +104,7 @@ Collected errors:
  * opkg_download: Check your network settings and connectivity.
 
 root@OpenWrt:/mnt# 
-
-
 ```
+
+* https://openwrt.org/faq/failed_to_download_wget_returned_4
+* https://forum.openwrt.org/t/opkg-update-error-wget-returned-4/637/6
