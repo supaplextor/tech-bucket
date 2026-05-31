@@ -108,3 +108,25 @@ root@OpenWrt:/mnt#
 
 * https://openwrt.org/faq/failed_to_download_wget_returned_4
 * https://forum.openwrt.org/t/opkg-update-error-wget-returned-4/637/6
+
+resolv.conf is controlled by something like cgi-bin/luci/admin/network/network - 
+
+# mount /dev/sda1 ...
+
+```
+root@OpenWrt177:~# mount /dev/sda1 /mnt/samba/
+mount: mounting /dev/sda1 on /mnt/samba/ failed: Invalid argument
+root@OpenWrt177:~# dmesg | tail
+[  173.838255] br-lan: port 2(lan2) entered blocking state
+[  173.843770] br-lan: port 2(lan2) entered forwarding state
+[  173.849797] br-lan: port 2(lan2) entered disabled state
+[  173.854693] br-lan: port 4(lan4) entered disabled state
+[  176.720545] qca8k-ipq4019 c000000.switch lan2: Link is Up - 1Gbps/Full - flow control rx/tx
+[  176.720666] br-lan: port 2(lan2) entered blocking state
+[  176.727775] br-lan: port 2(lan2) entered forwarding state
+[  176.799898] qca8k-ipq4019 c000000.switch lan4: Link is Up - 1Gbps/Full - flow control rx/tx
+[  176.800049] br-lan: port 4(lan4) entered blocking state
+[  176.807143] br-lan: port 4(lan4) entered forwarding state
+root@OpenWrt177:~# echo /dev/sd*
+/dev/sda /dev/sda1
+```
