@@ -114,6 +114,11 @@ resolv.conf is controlled by something like cgi-bin/luci/admin/network/network -
 # mount /dev/sda1 ...
 
 ```
+root@OpenWrt177:~# lsusb
+Bus 001 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
+Bus 002 Device 001: ID 1d6b:0003 Linux Foundation 3.0 root hub
+Bus 002 Device 002: ID 0781:5591 SanDisk Corp. Ultra Flair
+Bus 003 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
 root@OpenWrt177:~# mount /dev/sda1 /mnt/samba/
 mount: mounting /dev/sda1 on /mnt/samba/ failed: Invalid argument
 root@OpenWrt177:~# dmesg | tail
