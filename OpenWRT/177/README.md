@@ -134,4 +134,26 @@ root@OpenWrt177:~# dmesg | tail
 [  176.807143] br-lan: port 4(lan4) entered forwarding state
 root@OpenWrt177:~# echo /dev/sd*
 /dev/sda /dev/sda1
+root@OpenWrt177:~# hexdump < /dev/sda | head
+0000000 b8fa 1000 d08e 00bc b8b0 0000 d88e c08e
+0000010 befb 7c00 00bf b906 0200 a4f3 21ea 0006
+0000020 be00 07be 0438 0b75 c683 8110 fefe 7507
+0000030 ebf3 b416 b002 bb01 7c00 80b2 748a 8b01
+0000040 024c 13cd 00ea 007c eb00 00fe 0000 0000
+0000050 0000 0000 0000 0000 0000 0000 0000 0000
+*
+00001b0 0000 0000 0000 0000 a214 fc41 0000 0400
+00001c0 0401 fe83 ffc2 0800 0000 b800 0729 0000
+00001d0 0000 0000 0000 0000 0000 0000 0000 0000
+Details for package kmod-fs-ext4 (webui; install it)
+root@OpenWrt177:~# mount /dev/sda1 /mnt/samba/
+root@OpenWrt177:~# df
+Filesystem           1K-blocks      Used Available Use% Mounted on
+/dev/root                 4608      4608         0 100% /rom
+tmpfs                   123576      4624    118952   4% /tmp
+/dev/ubi0_1              64912     19404     42156  32% /overlay
+overlayfs:/overlay       64912     19404     42156  32% /
+tmpfs                      512         0       512   0% /dev
+/dev/sda1             58828148      2072  55805328   0% /mnt/samba
+
 ```
