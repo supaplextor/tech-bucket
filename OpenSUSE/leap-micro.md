@@ -1,6 +1,10 @@
+# qemu window
 <img width="810" height="661" alt="image" src="https://github.com/user-attachments/assets/f023cadb-2ad6-438e-954f-1a92f53d93b8" />
 
+# aqemu
 <img width="895" height="1232" alt="image" src="https://github.com/user-attachments/assets/20bab1de-0528-426c-bbb9-7d8b9e84dac0" />
+
+## dmesg
 
 ```
 [    0.000000][    T0] Linux version 6.12.0-160000.5-default (geeko@buildhost) (gcc-13 (SUSE Linux) 13.4.0, GNU ld (GNU Binutils; SUSE Linux 16) 2.43.1.20241209-160000.2) #1 SMP PREEMPT_DYNAMIC Wed Sep 10 15:26:25 UTC 2025 (3545bbd)
@@ -433,5 +437,7 @@ Fatal glibc error: CPU does not support x86-64-v2
 
 
 ```
+
+# fixed
 
 Resolved by using -cpu max (kvm/qemu).
