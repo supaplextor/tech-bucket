@@ -433,3 +433,5 @@ Fatal glibc error: CPU does not support x86-64-v2
 
 
 ```
+
+Resolved by using -cpu max (kvm/qemu).
