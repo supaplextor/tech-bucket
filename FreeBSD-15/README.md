@@ -8,6 +8,8 @@ mt: /dev/sa0: Device not configured
 
 More on this later, but in the meantime I had to compile a kernel with sa module support.
 
+# diff
+
 ```
 supaplex@bsd-1:/usr/src/sys/amd64/conf $ diff -u GENERIC TAPE1 
 --- GENERIC     2026-06-12 14:54:03.453358000 -0700
