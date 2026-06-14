@@ -14,4 +14,16 @@ root@bsd-1:/usr/src # make buildkernel KERNCONF=TAPE3 && make installkernel KERN
 root@bsd-1:/usr/src # ls /boot/kernel*/sa*
 /boot/kernel.GENERIC/safe.ko            /boot/kernel.old/safe.ko                /boot/kernel/safe.ko
 /boot/kernel.GENERIC/safexcel.ko        /boot/kernel.old/safexcel.ko            /boot/kernel/safexcel.ko
+root@bsd-1:/boot # cat /usr/src/sys/amd64/conf/TAPE3 
+include GENERIC
+ident TAPE3
+
+device sa
+
+options ZFS
+device zfs
+
+root@bsd-1:/boot # find . -name sa.ko
+root@bsd-1:/boot # 
+
 ```
