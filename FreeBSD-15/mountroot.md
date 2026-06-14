@@ -7,3 +7,4 @@ ident TAPE3
 
 device sa
 ```
+root@bsd-1:/usr/src # make -j4 buildkernel KERNCONF=TAPE3 && make installkernel KERNCONF=TAPE3
