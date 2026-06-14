@@ -8,5 +8,4 @@ https://docs.freebsd.org/en/books/handbook/kernelconfig/#kernelconfig-building
 ```
 root@bsd-1:/usr/src # make buildkernel KERNCONF=TAPE3 && make installkernel KERNCONF=TAPE3
 ```
-* https://docs.freebsd.org/en/books/handbook/kernelconfig/
 * man 4 sa
