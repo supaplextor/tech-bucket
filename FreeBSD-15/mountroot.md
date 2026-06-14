@@ -9,3 +9,9 @@ https://docs.freebsd.org/en/books/handbook/kernelconfig/#kernelconfig-building
 root@bsd-1:/usr/src # make buildkernel KERNCONF=TAPE3 && make installkernel KERNCONF=TAPE3
 ```
 * man 4 sa
+
+```
+root@bsd-1:/usr/src # ls /boot/kernel*/sa*
+/boot/kernel.GENERIC/safe.ko            /boot/kernel.old/safe.ko                /boot/kernel/safe.ko
+/boot/kernel.GENERIC/safexcel.ko        /boot/kernel.old/safexcel.ko            /boot/kernel/safexcel.ko
+```
