@@ -6,7 +6,7 @@ mt: /dev/sa0: Device not configured
 
 ```
 
-More on this later, but in the meantime I had to compile a kernel with sa module support.
+More on this later, but in the meantime I had to compile a kernel with sa support.
 
 # diff
 
