@@ -16,7 +16,7 @@ device sa
 
 options ZFS
 device zfs
-
+(redundant; same as GENERIC)
 root@bsd-1:~ # ls -l /dev/sa* /dev/nsa* /dev/st* /dev/nst*
 ls: /dev/nst*: No such file or directory
 crw-rw----  1 root operator 0x7e Jun 16 17:45 /dev/nsa0
