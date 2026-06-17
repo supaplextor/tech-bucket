@@ -1,26 +1,44 @@
-<img width="1024" height="768" alt="rpviewer(1)" src="https://github.com/user-attachments/assets/f383523a-0454-454a-9e35-dae31a052e88" />
-
 ```
 # mt -f /dev/sa0 status
 mt: /dev/sa0: Device not configured
 
-```
-
-More on this later, but in the meantime I had to compile a kernel with sa support.
-
-# diff
+root@bsd-1:/usr/src # make buildkernel KERNCONF=TAPE3 && make installkernel KERNCONF=TAPE3
 
 ```
-supaplex@bsd-1:/usr/src/sys/amd64/conf $ diff -u GENERIC TAPE1 
---- GENERIC     2026-06-12 14:54:03.453358000 -0700
-+++ TAPE1       2026-06-12 15:23:29.864015000 -0700
-@@ -154,6 +154,7 @@
- device         isci                    # Intel C600 SAS controller
- device         ocs_fc                  # Emulex FC adapters
- device         pvscsi                  # VMware PVSCSI
-+device         sa                      # sequential access tape drives
- 
- # ATA/SCSI peripherals
- device         scbus                   # SCSI bus (required for ATA/SCSI)
-supaplex@bsd-1:/usr/src/sys/amd64/conf $ 
+* man 4 sa
+
 ```
+root@bsd-1:/boot # cat /usr/src/sys/amd64/conf/TAPE3 
+include GENERIC
+ident TAPE3
+
+device sa
+
+options ZFS
+device zfs
+
+root@bsd-1:~ # ls -l /dev/sa* /dev/nsa* /dev/st* /dev/nst*
+ls: /dev/nst*: No such file or directory
+crw-rw----  1 root operator 0x7e Jun 16 17:45 /dev/nsa0
+crw-rw----  1 root operator 0x7d Jun 16 17:45 /dev/sa0
+crw-rw----  1 root operator 0x7c Jun 16 17:45 /dev/sa0.ctl
+lrwxr-xr-x  1 root wheel       4 Jun 16 17:45 /dev/stderr -> fd/2
+lrwxr-xr-x  1 root wheel       4 Jun 16 17:45 /dev/stdin -> fd/0
+lrwxr-xr-x  1 root wheel       4 Jun 16 17:45 /dev/stdout -> fd/1
+root@bsd-1:~ # 
+
+root@bsd-1:~ #     camcontrol devlist
+<QUANTUM DLT-V4 0A00>              at scbus0 target 5 lun 0 (sa0,pass0)
+<Patriot Burst SBFM61.3>           at scbus2 target 0 lun 0 (pass1,ada0)
+<AHCI SGPIO Enclosure 2.00 0001>   at scbus3 target 0 lun 0 (ses0,pass2)
+<KVM vmDisk-CD 0.01>               at scbus4 target 0 lun 0 (pass3,cd0)
+<USB SanDisk 3.2Gen1 1.00>         at scbus5 target 0 lun 0 (pass4,da0)
+
+sa0 at ahc0 bus 0 scbus0 target 5 lun 0
+sa0: <QUANTUM DLT-V4 0A00> Removable Sequential Access SCSI-2 device
+sa0: Serial Number MYL7M00075
+sa0: 40.000MB/s transfers (20.000MHz, offset 8, 16bit)
+
+```
+
+
