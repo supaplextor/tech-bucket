@@ -28,4 +28,11 @@ device zfs
 root@bsd-1:/boot # find . -name sa.ko
 root@bsd-1:/boot # 
 
+supaplex@bsd-1:/boot $ sha256sum /boot/kernel.*/kernel
+b7396889dd6c268246f781a7176d1dc55861646040c5ef74686904caa9781b57  /boot/kernel.GENERIC/kernel
+b7396889dd6c268246f781a7176d1dc55861646040c5ef74686904caa9781b57  /boot/kernel.ORIG/kernel
+04f0493bb9ae36556a5dc1b5b9f6e41040a17cbed8e2c85760ab73ad930cf380  /boot/kernel.TAPE3/kernel
+
 ```
+
+
