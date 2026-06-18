@@ -1,22 +1,9 @@
 ```
 # mt -f /dev/sa0 status
 mt: /dev/sa0: Device not configured
-
-root@bsd-1:/usr/src # make buildkernel KERNCONF=TAPE3 && make installkernel KERNCONF=TAPE3
-
 ```
 * man 4 sa
-
 ```
-root@bsd-1:/boot # cat /usr/src/sys/amd64/conf/TAPE3 
-include GENERIC
-ident TAPE3
-
-device sa
-
-options ZFS
-device zfs
-(redundant; same as GENERIC)
 root@bsd-1:~ # ls -l /dev/sa* /dev/nsa* /dev/st* /dev/nst*
 ls: /dev/nst*: No such file or directory
 crw-rw----  1 root operator 0x7e Jun 16 17:45 /dev/nsa0
@@ -38,7 +25,25 @@ sa0 at ahc0 bus 0 scbus0 target 5 lun 0
 sa0: <QUANTUM DLT-V4 0A00> Removable Sequential Access SCSI-2 device
 sa0: Serial Number MYL7M00075
 sa0: 40.000MB/s transfers (20.000MHz, offset 8, 16bit)
+root@bsd-1:~ # mt -f /dev/sa0.ctl status
+Drive: sa0: <QUANTUM DLT-V4 0A00> Serial Number: MYL7M00075
+---------------------------------
+Mode      Density              Blocksize      bpi      Compression
+Current:  0x00:default         variable       0        enabled (IDRC)
+---------------------------------
+Current Driver State: at rest.
+---------------------------------
+Partition:  -1      Calc File Number:  -1     Calc Record Number: -1
+Residual:    0  Reported File Number:  -1 Reported Record Number: -1
+Flags: None
+root@bsd-1:~ # 
+
+
+
+
 
 ```
+
+
 
 
