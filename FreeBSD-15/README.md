@@ -4,6 +4,8 @@ mt: /dev/sa0: Device not configured
 root@bsd-1:~ # mt -f /dev/sa0 load
 mt: /dev/sa0: Device not configured
 ```
+<blockquote>You can use the /dev/rsa0.ctl device to get status when there is no tape in the drive.</blockquote>
+
 * man 4 sa
 ```
 root@bsd-1:~ # ls -l /dev/sa* /dev/nsa* /dev/st* /dev/nst*
