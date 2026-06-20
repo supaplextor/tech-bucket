@@ -1,5 +1,7 @@
 ```
-# mt -f /dev/sa0 status
+root@bsd-1:~ # mt -f /dev/sa0 status
+mt: /dev/sa0: Device not configured
+root@bsd-1:~ # mt -f /dev/sa0 load
 mt: /dev/sa0: Device not configured
 ```
 * man 4 sa
