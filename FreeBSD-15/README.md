@@ -6,6 +6,23 @@ mt: /dev/sa0: Device not configured
 ```
 <blockquote>You can use the /dev/rsa0.ctl device to get status when there is no tape in the drive.</blockquote>
 
+```
+root@bsd-1:~ # mt -f /dev/sa0.ctl  status
+Drive: sa0: <QUANTUM DLT-V4 0A00> Serial Number: MYL7M00075
+---------------------------------
+Mode      Density              Blocksize      bpi      Compression
+Current:  0x00:default         variable       0        enabled (IDRC)
+---------------------------------
+Current Driver State: at rest.
+---------------------------------
+Partition:  -1      Calc File Number:  -1     Calc Record Number: -1
+Residual:    0  Reported File Number:  -1 Reported Record Number: -1
+Flags: None
+root@bsd-1:~ # mt -f /dev/sa0.ctl  load
+mt: /dev/sa0.ctl: load: Device not configured
+
+```
+
 * man 4 sa
 ```
 root@bsd-1:~ # ls -l /dev/sa* /dev/nsa* /dev/st* /dev/nst*
