@@ -61,3 +61,9 @@ root@bsd-1:~ #
 ```
 
 <img width="1024" height="768" alt="rpviewer(4)" src="https://github.com/user-attachments/assets/a9f015f2-b983-4524-8e6b-d3139c9e4dad" />
+
+* https://studfile.net/preview/415060/page:26/
+* https://forums.freebsd.org/threads/freebsd-and-tape-lto-9.100341/
+* https://forums.freebsd.org/threads/scsi-tape-drive.47794/
+* https://forums.freebsd.org/threads/backup-tape.16640/
+
