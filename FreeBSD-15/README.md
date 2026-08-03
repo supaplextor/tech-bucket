@@ -60,6 +60,7 @@ Flags: None
 root@bsd-1:~ #
 ```
 
+Tape will not stay in the drive very long...
 <img width="1024" height="768" alt="rpviewer(4)" src="https://github.com/user-attachments/assets/a9f015f2-b983-4524-8e6b-d3139c9e4dad" />
 
 * https://studfile.net/preview/415060/page:26/
