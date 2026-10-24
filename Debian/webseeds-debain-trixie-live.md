@@ -1,4 +1,4 @@
-https://linuxtorrents.com/debian/debian-live/13.7.0/
+Over 65 weebseed mirror torrents at https://linuxtorrents.com/debian/debian-live/13.7.0/
 
 <pre><code>webseeding/torrents$ go run inspect_webseeds.go debian-live-13.7.0-amd64-debian-junior.iso.torrent
 url-list: https://cdimage.debian.org/debian-cd/current-live/amd64/iso-hybrid/debian-live-13.7.0-amd64-debian-junior.iso
