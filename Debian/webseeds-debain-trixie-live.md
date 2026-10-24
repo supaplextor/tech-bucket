@@ -9,4 +9,4 @@ url-list: https://debian.cs.nycu.edu.tw/debian-cd/current-live/amd64/iso-hybrid/
 url-list: https://debian.envisagecloud.net.za/debian-cd/current-live/amd64/iso-hybrid/debian-live-13.7.0-amd64-debian-junior.iso
 ....</code></pre>
 
-<img width="499" height="75" alt="image" src="https://github.com/user-attachments/assets/c7b25041-3490-4d92-9fe3-a7695177b71a" />
+<img width="2443" height="1367" alt="image" src="https://github.com/user-attachments/assets/780cc7a9-b40b-4f99-a89a-ceff3e1e8bbe" />
